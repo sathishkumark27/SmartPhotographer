@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <!--rosparam file="$(find mybot_control)/config/mybot_control.yaml" command="load"/-->
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_pose_controller" pkg="mybot_control" type="bot_image_raw_listener.py" respawn="false" output="screen">
+  </node>
+
+</launch>
